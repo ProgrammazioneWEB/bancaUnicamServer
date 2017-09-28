@@ -322,7 +322,7 @@ app.post('/singup', function (req, res) {
             //  Dinamic Link creation
             var date = new Date();
             var milliseconds = date.getMilliseconds();
-            var indirizzo = "http://" + ip + "/verify/?code=" + (milliseconds + req.body.pin);
+            var indirizzo = ip + "/verify/?code=" + (milliseconds + req.body.pin);
 
             var utente = new UserToVerify({
               numberOfAccount: nAccount,
