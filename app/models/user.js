@@ -60,7 +60,6 @@ var user = new Schema({
     },
     image : {
         type : String,
-        unique : true,
     },
     active : {
         type : Boolean,
