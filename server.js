@@ -210,10 +210,14 @@ app.get('/verify', function (req, res) {
     database.findUsersByLink(req.query.code, function (ris, result) {
       if (ris) {
         database.findUserByAccount(result, function (ris, result) {
+          var n_account = result.numberOfAccount;
           if (ris) {
             database.activateAccount(result, function (ris, message) {
               if (ris)
+              {
                 res.json('Il tuo account è stato attivato correttamente.');
+                database.deleteUserToVerify(n_account);
+              }
               else
                 res.json({
                   result: false,
