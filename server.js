@@ -2,8 +2,6 @@ var express = require('express'); // Used for the route
 var app = express();
 var bodyParser = require('body-parser'); // Parsing middleware
 var morgan = require('morgan'); // Logger middleware
-
-
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User = require('./app/models/user'); // get our mongoose model
@@ -25,7 +23,6 @@ var DataStoreController = require('./dataStore');
 // ==== configuration ====
 // =======================
 var port = process.env.PORT || 3001; // used to create, sign, and verify tokens
-var ip = "localhost";
 
 app.set('superSecret', config.secret); // secret variable (prelevata da config.js)
 
@@ -1079,4 +1076,4 @@ app.use('/api', apiRoutes);
 // start the server ======
 // =======================
 app.listen(port);
-console.log("Node è in funzione su http://" + ip + ":" + port);
+console.log("Node è in funzione sulla porta" + port);
