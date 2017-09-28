@@ -854,7 +854,7 @@ apiRoutes.post('/invio-avviso', function (req, res) {
     if (ris)
       if (result.admin) {
         var date = new Date();
-        var today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + (date.getDate() + 1 + "-" + date.getHours());
+        var today = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 
         database.maxNumberOfAdvise(function (num) {
           var numero = 0;
