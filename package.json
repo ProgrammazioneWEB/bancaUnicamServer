@@ -1,0 +1,36 @@
+{
+  "name": "bancaunicam",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.15.5",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.0.1",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.1.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "6.11.2",
+  "description": "home-banking application",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammazioneWEB/ProgettoProgrammazioneWeb.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Luca Marasca, Lorenzo Stacchio, Matteo Lupini, Nicolò Ruggeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgrammazioneWEB/ProgettoProgrammazioneWeb/issues"
+  },
+  "homepage": "https://github.com/ProgrammazioneWEB/ProgettoProgrammazioneWeb#readme"
+}
