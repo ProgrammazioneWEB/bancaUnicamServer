@@ -824,6 +824,7 @@ apiRoutes.post('/CalcolaMediaEntrate', function (req, res) {
               //  calculating spend average
               console.log(data.sumQuantity);
               var ris = data.sumQuantity / days;
+              console.log(days);
               console.log(ris);
               res.json({
                 success: result,
