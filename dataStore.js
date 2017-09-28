@@ -1,7 +1,7 @@
 var fs = require('fs');
 FileUploadController = function () { };
 
-var localPath = '../frontEnd/userPic/';
+var localPath = 'https://bancaunicam.herokuapp.com/userPic/';
 
 FileUploadController.prototype.uploadFile = function (req, res, next) {
 
