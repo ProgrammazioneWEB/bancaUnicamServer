@@ -759,11 +759,13 @@ apiRoutes.post('/CalcolaMediaUscite', function (req, res) {
             }
             else {
 
-              if (days == 0)
+              if (days < 1)
                 days = 1;
 
+              var days1 = Math.trunc(days);
+
               //  Calculating spend average
-              var ris = data.sumQuantity / days;
+              var ris = data.sumQuantity / days1;
 
               res.json({
                 success: result,
@@ -818,14 +820,14 @@ apiRoutes.post('/CalcolaMediaEntrate', function (req, res) {
             }
             else {
 
-              if (days == 0)
+              if (days < 1)
                 days = 1;
 
+              var days1 = Math.trunc(days);
+
               //  calculating spend average
-              console.log(data.sumQuantity);
-              var ris = data.sumQuantity / days;
-              console.log(days);
-              console.log(ris);
+              var ris = data.sumQuantity / days1;
+              
               res.json({
                 success: result,
                 message: 'Dati inviati correttamente.',
