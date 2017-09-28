@@ -650,7 +650,7 @@ exports.deleteUserToVerify = function (numberOfAccount, callbackRis) {
       throw err;
     }
     var myquery = { numberOfAccount: numberOfAccount };
-    db.collection("customers").deleteOne(myquery, function (err, obj) {
+    db.collection("userToVerify").deleteOne(myquery, function (err, obj) {
       if (err) {
         callbackRis(false, "Utente non cancellato.");
         throw err;
