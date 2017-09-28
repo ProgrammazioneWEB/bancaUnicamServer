@@ -23,6 +23,7 @@ var DataStoreController = require('./dataStore');
 // ==== configuration ====
 // =======================
 var port = process.env.PORT || 3001; // used to create, sign, and verify tokens
+var ip = "https://bancaunicambackend.herokuapp.com";
 
 app.set('superSecret', config.secret); // secret variable (prelevata da config.js)
 
@@ -321,7 +322,7 @@ app.post('/singup', function (req, res) {
             //  Dinamic Link creation
             var date = new Date();
             var milliseconds = date.getMilliseconds();
-            var indirizzo = "http://" + ip + ":3001/verify/?code=" + (milliseconds + req.body.pin);  //  ######## invece di localhost andrà inserita una variabile contenente l'ip in rete della macchina ############################
+            var indirizzo = "http://" + ip + "/verify/?code=" + (milliseconds + req.body.pin);
 
             var utente = new UserToVerify({
               numberOfAccount: nAccount,
